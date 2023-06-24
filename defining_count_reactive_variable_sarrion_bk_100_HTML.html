@@ -1,0 +1,50 @@
+<html>
+    <head>
+        
+        <meta charset="utf-8"  />
+        <script src="https://unpkg.com/vue@next"></script>
+
+    </head>
+
+    <body>
+
+        <div id="app"></div>
+
+    </body>
+
+    <script>
+
+        var app = Vue.createApp({
+            template : "The counter is: {{count}}",
+            data() {
+
+                // return an object containing the reactive
+                // variables
+
+                return {
+                    count : 0
+                }
+            }
+
+        
+
+        // the count reactive variable is defined in the data () method
+        // which returns the {count : 0} object containig the program's reactive variable
+        // this reactive variable can then be used in the template by means of the notation
+        // with {{ and }}
+        // This notation is used to indicate a JavaScript expression, such as the value of a variable.
+        // the definition of a so-called reactive variable makes it possible to link the display
+        // to the value of a variable
+        // as soon as the variable is modified, the display is also modified
+        // the counter remains positioned at its initial value:0
+        // Reactivity is only visible when the variable is modified.
+        // The display will therefore be modified as soon as the count variable is modified
+
+        })
+
+        var vm = app.mount("div#app");
+
+    </script>
+
+
+</html>

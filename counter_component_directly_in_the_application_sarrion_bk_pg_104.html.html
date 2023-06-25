@@ -1,0 +1,49 @@
+<html>
+    <head>
+        
+        <meta charset="utf-8"  />
+        <script src="https://unpkg.com/vue@next"></script>
+
+    </head>
+
+    <body>
+
+        <div id="app"></div>
+
+    </body>
+
+    <script>
+
+        var app = Vue.createApp ({
+            template : "<counter />"
+
+        });
+
+        
+        app.component("counter", {
+            template : "The counter is: {{count}}",
+            data() {
+                return {
+                    count : 0 
+                }
+            }
+        });
+        
+       // the app.component (name, options) method works on the same principle 
+       // Vue.createApp(options):
+       // the name parameter corresponds to the name of the component,
+       // which will then be used as tags in HTML templates
+       // the options parameter is similar in both case. There is the template section, data, and so on
+       // The <counter> component can then be used in other templates, including the one defined for
+       // the application
+       // 
+
+   
+        var vm = app.mount("div#app");
+
+
+
+    </script>
+
+
+</html>

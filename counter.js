@@ -13,3 +13,7 @@ const Counter = {
 }
 
 export default Counter;
+
+// the <counter> component is defined as an object, having template, data, and created properties.
+// the export default Counter instruction makes the component accessible in the other where this module is imported
+// to use the JavaScript import statement
